@@ -15,7 +15,7 @@
 
 // prototypes
 bool is_valid_input(int argc, string argv[]);
-void make_fibs(int fib_count);
+void generate_fibs(int fibs[], int fib_count);
 
 int main(int argc, string argv[])
 {
@@ -31,7 +31,8 @@ int main(int argc, string argv[])
     }
     // good input
     int fib_count = atoi(argv[1]);
-    make_fibs(fib_count);
+    int fibs[fib_count];
+    generate_fibs(fibs, fib_count);
 
     // success
     return 0;
@@ -50,11 +51,19 @@ bool is_valid_input(int argc, string argv[])
     {
         return false;
     }
-
     return true;
 }
 
-void make_fibs(int fib_count)
+void generate_fibs(int fibs[], int fib_count)
 {
     printf("Print %i Fibonacci numbers! \n", fib_count);
+
+    fibs[0] = 0;
+    fibs[1] = 1;
+
+    // head start at index 2
+    for (int i = 2; i < fib_count; i++)
+    {
+        fibs[i] = fibs[i - 1] + fibs[i - 2];
+    }
 }
