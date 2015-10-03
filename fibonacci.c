@@ -11,11 +11,12 @@
 #define COLOR_RESET   "\x1b[0m"
 
 // constants
-#define MAX_FIB_COUNT 2000
+#define MAX_FIB_COUNT 200
 
 // prototypes
 bool is_valid_input(int argc, string argv[]);
 void generate_fibs(int fibs[], int fib_count);
+void print_array(int data[], int len);
 
 int main(int argc, string argv[])
 {
@@ -33,6 +34,7 @@ int main(int argc, string argv[])
     int fib_count = atoi(argv[1]);
     int fibs[fib_count];
     generate_fibs(fibs, fib_count);
+    print_array(fibs, fib_count);
 
     // success
     return 0;
@@ -66,4 +68,13 @@ void generate_fibs(int fibs[], int fib_count)
     {
         fibs[i] = fibs[i - 1] + fibs[i - 2];
     }
+}
+
+void print_array(int data[], int len)
+{
+    for (int i = 0; i < len; i++)
+    {
+        printf("%i\n", data[i]);
+    }
+    printf("\n");
 }
