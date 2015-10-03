@@ -14,9 +14,10 @@
 #define MAX_FIB_COUNT 2000
 
 // prototypes
-bool is_valid_input (int argc, string argv[]);
+bool is_valid_input(int argc, string argv[]);
+void make_fibs(int fib_count);
 
-int main (int argc, string argv[])
+int main(int argc, string argv[])
 {
     // bad input
     if (!is_valid_input(argc, argv))
@@ -30,13 +31,13 @@ int main (int argc, string argv[])
     }
     // good input
     int fib_count = atoi(argv[1]);
+    make_fibs(fib_count);
 
-    printf("Print %i Fibonacci numbers! \n", fib_count);
     // success
     return 0;
 }
 
-bool is_valid_input (int argc, string argv[])
+bool is_valid_input(int argc, string argv[])
 {
     // require a single arg for count of fib numbers
     if (argc != 2)
@@ -51,4 +52,9 @@ bool is_valid_input (int argc, string argv[])
     }
 
     return true;
+}
+
+void make_fibs(int fib_count)
+{
+    printf("Print %i Fibonacci numbers! \n", fib_count);
 }
