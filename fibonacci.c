@@ -48,7 +48,7 @@ bool is_valid_input(int argc, string argv[])
         return false;
     }
     // is the arg valid?
-    int fib_count = atol(argv[1]);
+    int fib_count = atoi(argv[1]);
     if (fib_count < 1 || fib_count > MAX_FIB_COUNT)
     {
         return false;
