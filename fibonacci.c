@@ -56,20 +56,6 @@ bool is_valid_input(int argc, string argv[])
     return true;
 }
 
-void generate_fibs(long long fibs[], int fib_count)
-{
-    printf("Print %i Fibonacci numbers! \n", fib_count);
-
-    fibs[0] = (long long)0;
-    fibs[1] = (long long)1;
-
-    // head start at index 2
-    for (int i = 2; i < fib_count; i++)
-    {
-        fibs[i] = fibs[i - 1] + fibs[i - 2];
-    }
-}
-
 void print_array(long long data[], int len)
 {
     for (int i = 0; i < len; i++)
@@ -78,3 +64,19 @@ void print_array(long long data[], int len)
     }
     printf("\n");
 }
+
+void generate_fibs(long long fibs[], int fib_count)
+{
+    printf("Print %i Fibonacci numbers! \n", fib_count);
+
+    fibs[0] = (long long)0;
+    fibs[1] = (long long)1;git 
+
+    // head start at index 2
+    for (int i = 2; i < fib_count; i++)
+    {
+        fibs[i] = fibs[i - 1] + fibs[i - 2];
+    }
+}
+
+
