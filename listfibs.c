@@ -70,7 +70,7 @@ void generate_fibs(long long fibs[], int fib_count)
     printf("Print %i Fibonacci numbers! \n", fib_count);
 
     fibs[0] = (long long)0;
-    fibs[1] = (long long)1;git 
+    fibs[1] = (long long)1;
 
     // head start at index 2
     for (int i = 2; i < fib_count; i++)
@@ -78,5 +78,3 @@ void generate_fibs(long long fibs[], int fib_count)
         fibs[i] = fibs[i - 1] + fibs[i - 2];
     }
 }
-
-
